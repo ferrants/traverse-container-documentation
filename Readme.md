@@ -30,21 +30,21 @@ API
 
 ###Contact
 
-  A contact is written as a [Javascript Object Literal](http://www.dyn-web.com/tutorials/object-literal/) and may contain any of the following fields:
+A contact is written as a [Javascript Object Literal](http://www.dyn-web.com/tutorials/object-literal/) and may contain any of the following fields:
 
-  | Parameter   | Description | Optional |
-  | ------------- | ------------- | --- |
-  | `email`     | Plaintext (non-hashed) email address. This is the only required field. This plugin handles all normalization and hashing. | No |
-  | `emailMd5`     | Expects a [properly preprocessed](#preprocessing-email-addresses) email address, hashed using the MD5 algorithm. If both emailMD5 and emailSHA1 are set, the `email` field may be left blank. | Yes |
-  | `emailSha1`     |  | Yes |
-  | `first`     | First name | Yes |
-  | `last`      | Last name | Yes |
-  | `phone`     | Free-form phone number | Yes |
-  | `street1`    | The first line of the street address (e.g., `"123 Main St."`) | Yes |
-  | `street2`   | Second line of the stree address (e.g., `"Apartment 1A"`)        | Yes |
-  | `city`      | The city name  | Yes |
-  | `state`     | The full U.S. state name or two-letter abbreviation | Yes |
-  | `zip`       | The U.S. zip code, 5 or 9 letters, with or without hyphen | Yes |
+| Parameter   | Description | Optional |
+| ------------- | ------------- | --- |
+| `email`     | Plaintext (non-hashed) email address. This is the only required field. This plugin handles all normalization and hashing. | No |
+| `emailMd5`     | Expects a [properly preprocessed](#preprocessing-email-addresses) email address, hashed using the MD5 algorithm. If both emailMD5 and emailSHA1 are set, the `email` field may be left blank. | Yes |
+| `emailSha1`     |  | Yes |
+| `first`     | First name | Yes |
+| `last`      | Last name | Yes |
+| `phone`     | Free-form phone number | Yes |
+| `street1`    | The first line of the street address (e.g., `"123 Main St."`) | Yes |
+| `street2`   | Second line of the stree address (e.g., `"Apartment 1A"`)        | Yes |
+| `city`      | The city name  | Yes |
+| `state`     | The full U.S. state name or two-letter abbreviation | Yes |
+| `zip`       | The U.S. zip code, 5 or 9 letters, with or without hyphen | Yes |
 
   To set, pass a contact object to the init function:
 
