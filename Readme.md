@@ -35,8 +35,8 @@ A contact is written as a [Javascript Object Literal](http://www.dyn-web.com/tut
 | Parameter   | Description | Optional |
 | ------------- | ------------- | --- |
 | `email`     | Plaintext (non-hashed) email address. This is the only required field. This plugin handles all normalization and hashing. | No |
-| `emailMd5`     | Expects a [properly preprocessed](#preprocessing-email-addresses) email address, hashed using the MD5 algorithm. If both emailMD5 and emailSHA1 are set, the `email` field may be left blank. | Yes |
-| `emailSha1`     |  | Yes |
+| `emailMd5`     | Expects a [properly preprocessed](#preprocessing-email-addresses) email address, hashed using the MD5 algorithm. If both emailMd5 and emailSha1 are set, the `email` field may be left blank. | Yes |
+| `emailSha1`     | Expects a [properly preprocessed](#preprocessing-email-addresses) email address, hashed using the SHA1 algorithm. If both emailMd5 and emailSha1 are set, the `email` field may be left blank. | Yes |
 | `first`     | First name | Yes |
 | `last`      | Last name | Yes |
 | `phone`     | Free-form phone number | Yes |
