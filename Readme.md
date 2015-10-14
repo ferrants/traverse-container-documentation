@@ -5,7 +5,7 @@ Contents
 --------
 
   * [API](#api)
-  <!-- * [Resource URL](#resource-url) -->
+  * [Resource URL](#resource-url)
   * [Example](#example)
   * [Best Practices](#best-practices)
 
@@ -85,6 +85,11 @@ Example
      });
   </script>
   ```
+  
+Resource URL
+--------------
+  http://static.traversedlp.com/container/v1/traverse-container.js
+
 
 Best Practices
 --------------
