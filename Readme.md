@@ -33,7 +33,7 @@ API
   A contact is written as a [Javascript Object Literal](http://www.dyn-web.com/tutorials/object-literal/) and may contain any of the following fields:
 
   | Parameter   | Description | Optional |
-  |-------------|-------------|-|
+  | ------------- | ------------- | --- |
   | `email`     | Plaintext (non-hashed) email address. This is the only required field. This plugin handles all normalization and hashing. | No |
   | `emailMd5`     | Expects a [properly preprocessed](#preprocessing-email-addresses) email address, hashed using the MD5 algorithm. If both emailMD5 and emailSHA1 are set, the `email` field may be left blank. | Yes |
   | `emailSha1`     |  | Yes |
