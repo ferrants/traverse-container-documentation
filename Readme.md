@@ -34,7 +34,7 @@ on your page.
 A contact is written as a [Javascript Object Literal](http://www.dyn-web.com/tutorials/object-literal/) and may contain any of the following fields:
 
 | Parameter   | Description | Required |
-|-------------|-------------|-|
+| ----------- | ----------- | - |
 | `email`     | Plaintext (non-hashed) email address. This is the only required field. This plugin handles all normalization and hashing. | Yes |
 | `first`     | First name | No |
 | `last`      | Last name | No |
