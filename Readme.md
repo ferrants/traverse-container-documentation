@@ -16,7 +16,7 @@ The plugin is initialized with a [contact](#contact) object and exposes no other
 
 ###Methods
 
-####start
+####TraverseContainer.start()
 
 Sets the contact data to be used by the Traverse container and initializes it
 on your page.
