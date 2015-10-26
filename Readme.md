@@ -16,9 +16,10 @@ API
 
 ###Methods
 
-####init
+####start
 
-  Initializes the container on your page, loading 3rd party pixels.
+  Sets the contact data to be used by the Traverse container and initializes it
+  on your page.
 
 #####Parameters:
 
@@ -26,30 +27,28 @@ API
 
 #####Example
 
-  `OurCompanyName.init({contact});`
+  `TraverseContainer.start(contact);`
 
-###Contact
+####Contact
 
-A contact is written as a [Javascript Object Literal](http://www.dyn-web.com/tutorials/object-literal/) and may contain any of the following fields:
+  A contact is written as a [Javascript Object Literal](http://www.dyn-web.com/tutorials/object-literal/) and may contain any of the following fields:
 
-| Parameter   | Description | Optional |
-| ------------- | ------------- | --- |
-| `email`     | Plaintext (non-hashed) email address. This is the only required field. This plugin handles all normalization and hashing. | No |
-| `emailMd5`     | Expects a [properly preprocessed](#preprocessing-email-addresses) email address, hashed using the MD5 algorithm. If both emailMd5 and emailSha1 are set, the `email` field may be left blank. | Yes |
-| `emailSha1`     | Expects a [properly preprocessed](#preprocessing-email-addresses) email address, hashed using the SHA1 algorithm. If both emailMd5 and emailSha1 are set, the `email` field may be left blank. | Yes |
-| `first`     | First name | Yes |
-| `last`      | Last name | Yes |
-| `phone`     | Free-form phone number | Yes |
-| `street1`    | The first line of the street address (e.g., `"123 Main St."`) | Yes |
-| `street2`   | Second line of the stree address (e.g., `"Apartment 1A"`)        | Yes |
-| `city`      | The city name  | Yes |
-| `state`     | The full U.S. state name or two-letter abbreviation | Yes |
-| `zip`       | The U.S. zip code, 5 or 9 letters, with or without hyphen | Yes |
+  | Parameter   | Description | Required |
+  |-------------|-------------|-|
+  | `email`     | Plaintext (non-hashed) email address. This is the only required field. This plugin handles all normalization and hashing. | Yes |
+  | `first`     | First name | No |
+  | `last`      | Last name | No |
+  | `phone`     | Free-form phone number | No |
+  | `street1`    | The first line of the street address (e.g., `"123 Main St."`) | No |
+  | `street2`   | Second line of the stree address (e.g., `"Apartment 1A"`)        | No |
+  | `city`      | The city name  | No |
+  | `state`     | The full U.S. state name or two-letter abbreviation | No |
+  | `zip`       | The U.S. zip code, 5 or 9 letters, with or without hyphen | No |
 
-  To set, pass a contact object to the init function:
+  To set, pass a contact object to the start function:
 
   ```
-  OurCompanyName.init({
+  TraverseContainer.start({
     email:    "john.doe@domain.com",
     first:    "John",
     last:     "Doe",
@@ -62,12 +61,16 @@ A contact is written as a [Javascript Object Literal](http://www.dyn-web.com/tut
   });
   ```
 
-####Preprocessing email addresses
+Resource URL
+------------
 
-Before passing a hashed email address to our service, it must first be converted to a standard format. You must:
+The Traverse container script may be loaded from the following URL:
 
-  - Remove all whitespace
-  - Convert all characters to lower case
+http(s)://static.traversedlp.com/v1/container/traverse-container.js?customerId={your customer ID}
+
+| Parameter    | Description | Required |
+|--------------|-------------|-|
+| `customerId` | Your 36-character customer ID (includes hyphens). | Yes |
 
 Example
 -------
@@ -77,21 +80,17 @@ Example
   ```
   <script src="resourceURL" type="text/javascript"><script/>
   <script type="text/javascript">
-  OurCompanyName.init({
-       "email":"jdoe@domain.com",
-       "first": "John",
-       "last": "Doe",
-       "state":"CO"
-     });
+  TraverseContainer.start({
+     email: "jdoe@domain.com",
+     first: "John",
+     last: "Doe",
+     state: "CO"
+   });
+
   </script>
   ```
-  
-Resource URL
---------------
-  http://static.traversedlp.com/container/v1/traverse-container.js
-
 
 Best Practices
 --------------
 
-  This module should always be loaded in the page body rather than head. For optimal page load, place script tag at bottom of page HTML.
+  This module should always be loaded in the page body rather than head. For optimal page load, place script tag at the bottom of your page HTML.
