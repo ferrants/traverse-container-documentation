@@ -69,7 +69,7 @@ The Traverse container script may be loaded from the following URL:
 http(s)://static.traversedlp.com/v1/container/traverse-container.js?customerId={your customer ID}
 
 | Parameter    | Description | Required |
-|--------------|-------------|-|
+| ------------ |------------ | -------- |
 | `customerId` | Your 36-character customer ID (includes hyphens). | Yes |
 
 Example
