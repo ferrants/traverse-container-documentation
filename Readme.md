@@ -12,7 +12,7 @@ Contents
 API
 ---
 
-The plugin is initialized with a [contact](#contact) object and exposes no other methods.
+The plugin is initialized with a [consumer](#consumer) object and exposes no other methods.
 
 ###Methods
 
