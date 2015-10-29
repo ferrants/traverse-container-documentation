@@ -18,20 +18,20 @@ The plugin is initialized with a [contact](#contact) object and exposes no other
 
 ####TraverseContainer.start()
 
-Sets the contact data to be used by the Traverse container and initializes it
+Sets the consumer data to be used by the Traverse container and initializes it
 on your page.
 
 #####Parameters:
 
-[contact](#contact) object
+[consumer](#consumer) object
 
 #####Example
 
-`TraverseContainer.start(contact);`
+`TraverseContainer.start(consumer);`
 
-####Contact
+####Consumer
 
-A contact is written as a [Javascript Object Literal](http://www.dyn-web.com/tutorials/object-literal/) and may contain any of the following fields:
+A consumer is written as a [Javascript Object Literal](http://www.dyn-web.com/tutorials/object-literal/) and may contain any of the following fields:
 
 | Parameter   | Description | Required |
 | ----------- | ----------- | -------- |
