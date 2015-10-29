@@ -45,7 +45,7 @@ A consumer is written as a [Javascript Object Literal](http://www.dyn-web.com/tu
 | `state`     | The full U.S. state name or two-letter abbreviation | No |
 | `zip`       | The U.S. zip code, 5 or 9 letters, with or without hyphen | No |
 
-To set, pass a contact object to the start function:
+To set, pass a consumer object to the start function:
 
 ```
 TraverseContainer.start({
