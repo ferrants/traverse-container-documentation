@@ -66,16 +66,16 @@ Resource URL
 
 The Traverse container script may be loaded from the following URL:
 
-http(s)://static.traversedlp.com/v1/container/traverse-container.js?customerId={your customer ID}
+http(s)://static.traversedlp.com/v1/container/traverse-container.js?clientId={your client ID}
 
 | Parameter    | Description | Required |
 | ------------ |------------ | -------- |
-| `customerId` | Your 36-character customer ID (includes hyphens). | Yes |
+| `clientId` | Your 36-character client ID (includes hyphens). | Yes |
 
 Example
 -------
 
-Include our tag, and initialize with your client data
+Include our tag, and initialize with your consumer data:
 
 ```
 <script src="resourceURL" type="text/javascript"><script/>
