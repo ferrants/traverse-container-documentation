@@ -78,7 +78,7 @@ Example
 Include our tag, and initialize with your consumer data:
 
 ```
-<script src="resourceURL" type="text/javascript"><script/>
+<script src="resourceURL" type="text/javascript"></script>
 <script type="text/javascript">
 TraverseContainer.start({
    email: "jdoe@domain.com",
