@@ -12,26 +12,26 @@ Contents
 API
 ---
 
-The plugin is initialized with a [consumer](#consumer) object and exposes no other methods.
+The plugin is initialized with a [user](#user) object and exposes no other methods.
 
 ###Methods
 
 ####TraverseContainer.start()
 
-Sets the consumer data to be used by the Traverse container and initializes it
+Sets the user data to be used by the Traverse container and initializes it
 on your page.
 
 #####Parameters:
 
-[consumer](#consumer) object
+[user](#user) object
 
 #####Example
 
-`TraverseContainer.start(consumer);`
+`TraverseContainer.start(user);`
 
-####Consumer
+####User
 
-A consumer is written as a [Javascript Object Literal](http://www.dyn-web.com/tutorials/object-literal/) and may contain any of the following fields:
+A user is written as a [Javascript Object Literal](http://www.dyn-web.com/tutorials/object-literal/) and may contain any of the following fields:
 
 | Parameter   | Description | Required |
 | ----------- | ----------- | -------- |
@@ -44,8 +44,10 @@ A consumer is written as a [Javascript Object Literal](http://www.dyn-web.com/tu
 | `city`      | The city name  | No |
 | `state`     | The full U.S. state name or two-letter abbreviation | No |
 | `zip`       | The U.S. zip code, 5 or 9 letters, with or without hyphen | No |
+| `audiences` | Array of audiences to which the user belongs. | No |
+| `userId`    | Client-specific user identifier. | No |
 
-To set, pass a consumer object to the start function:
+To set, pass a user object to the start function:
 
 ```
 TraverseContainer.start({
@@ -57,7 +59,8 @@ TraverseContainer.start({
   street2:  "Apartment 1A",
   city:     "Springfield",
   state:    "IL",
-  zip:      "1234"
+  zip:      "12345",
+  audiences: ["in-market car", "smoker"]
 });
 ```
 
@@ -75,7 +78,7 @@ http(s)://static.traversedlp.com/v1/container/traverse-container.js?clientId={yo
 Example
 -------
 
-Include our tag, and initialize with your consumer data:
+Include our tag, and initialize with your user data:
 
 ```
 <script src="resourceURL" type="text/javascript"></script>
