@@ -60,7 +60,7 @@ TraverseContainer.start({
   city:      "Springfield",
   state:     "IL",
   zip:       "12345",
-  audiences: ["in-market car", "smoker"]
+  audiences: ["in-market car", "smoker"],
   userId:    "123abc"
 });
 ```
@@ -88,7 +88,9 @@ TraverseContainer.start({
    email: "jdoe@domain.com",
    first: "John",
    last: "Doe",
-   state: "CO"
+   state: "CO",
+   audiences: ["in-market car", "smoker"],
+   userId:    "123abc"
  });
 
 </script>
