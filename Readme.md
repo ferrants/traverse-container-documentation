@@ -51,16 +51,17 @@ To set, pass a user object to the start function:
 
 ```
 TraverseContainer.start({
-  email:    "john.doe@domain.com",
-  first:    "John",
-  last:     "Doe",
-  phone:    "123-456-6789",
+  email:     "john.doe@domain.com",
+  first:     "John",
+  last:      "Doe",
+  phone:     "123-456-6789",
   street1:   "123 Main St.",
-  street2:  "Apartment 1A",
-  city:     "Springfield",
-  state:    "IL",
-  zip:      "12345",
+  street2:   "Apartment 1A",
+  city:      "Springfield",
+  state:     "IL",
+  zip:       "12345",
   audiences: ["in-market car", "smoker"]
+  userId:    "123abc"
 });
 ```
 
