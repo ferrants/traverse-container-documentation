@@ -38,7 +38,7 @@ A user is written as a [Javascript Object Literal](http://www.dyn-web.com/tutori
 | `email`     | Plaintext (non-hashed) email address. The container handles all normalization and hashing.<sup id="a1">[1](#f1)</sup> | Yes |
 | `first`     | First name | No |
 | `last`      | Last name | No |
-| `phone`     | Free-form phone number | No |
+| `phone`     | Free-form telephone number | No |
 | `carrier`   | Telephone carrier | No |
 | `street1`   | The first line of the street address (e.g., `"123 Main St."`) | No |
 | `street2`   | Second line of the street address (e.g., `"Apartment 1A"`)        | No |
