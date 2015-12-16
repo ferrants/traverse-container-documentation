@@ -43,8 +43,12 @@ A user is written as a [Javascript Object Literal](http://www.dyn-web.com/tutori
 | `street2`   | Second line of the stree address (e.g., `"Apartment 1A"`)        | No |
 | `city`      | The city name  | No |
 | `state`     | The full U.S. state name or two-letter abbreviation | No |
-| `zip`       | The U.S. zip code, 5 or 9 letters, with or without hyphen | No |
+| `zip`       | The U.S. zip code, 5 or 9 numbers, with or without hyphen | No |
 | `audiences` | Array of audiences to which the user belongs. | No |
+| `gender`    | Gender of user, either `male` or `female` | No |
+| `birthYear` | Four-digit year in which the use was born (YYYY) | No |
+| `birthMonth` | Numeric month in which the user was born (MM) | No |
+| `birthDay`  | Day of the month in which the user was born (DD) | No |
 | `userId`    | Client-specific user identifier. | No |
 
 To set, pass a user object to the start function:
