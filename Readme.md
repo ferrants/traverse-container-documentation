@@ -1,4 +1,4 @@
-Documentation v1.0:
+Documentation v1.1:
 -------------------
 
 Contents
