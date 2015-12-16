@@ -1,4 +1,4 @@
-Documentation v1.0:
+Documentation v1.1:
 -------------------
 
 Contents
@@ -35,12 +35,12 @@ A user is written as a [Javascript Object Literal](http://www.dyn-web.com/tutori
 
 | Parameter   | Description | Required |
 | ----------- | ----------- | -------- |
-| `email`     | Plaintext (non-hashed) email address. This is the only required field. This plugin handles all normalization and hashing. | Yes |
+| `email`     | Plaintext (non-hashed) email address. The container handles all normalization and hashing. | Yes |
 | `first`     | First name | No |
 | `last`      | Last name | No |
 | `phone`     | Free-form phone number | No |
 | `street1`    | The first line of the street address (e.g., `"123 Main St."`) | No |
-| `street2`   | Second line of the stree address (e.g., `"Apartment 1A"`)        | No |
+| `street2`   | Second line of the street address (e.g., `"Apartment 1A"`)        | No |
 | `city`      | The city name  | No |
 | `state`     | The full U.S. state name or two-letter abbreviation | No |
 | `zip`       | The U.S. zip code, 5 or 9 numbers, with or without hyphen | No |
