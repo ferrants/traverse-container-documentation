@@ -49,14 +49,14 @@ A user is written as a [Javascript Object Literal](http://www.dyn-web.com/tutori
 | `birthYear` | Four-digit year in which the use was born (YYYY) | No |
 | `birthMonth` | Numeric month in which the user was born (MM) | No |
 | `birthDay`  | Day of the month in which the user was born (DD) | No |
-| `userId`    | A string that, as much as possible, uniquely identifies a user. This could be a session ID, a visitor ID from a first-party cookie, or an ID passed via URL parameter from page to page. This is client-specific. | No |
+| `userId`    | Client-specific string that uniquely identifies a user within your system. This could be a session ID, a visitor ID from a first-party cookie, or an ID passed via URL parameter from page to page. | No |
 | `aaid`      | Google's Android Advertising ID<sup id="a1">[1](#f1)</sup> | No |
 | `idfa`      | Apple's iOS Identifier for Advertisers<sup id="a1">[1](#f1)</sup> | No  |
 | `waid`      | Microsoft's Windows Advertising ID<sup id="a1">[1](#f1)</sup> | No |
 | `uaid`      | Any unknown advertising ID. Use this value if you are uncertain which type you are receiving.<sup id="a1">[1](#f1)</sup> | No |
 | `uaidHash`  | Use this if you meet the criteria above, your ID has been hashed, and you do not know which algorithm was used. | No |
 
-<sub><b id="f1">1</b> Our container handles normalization and hashing of sensitive fields automatically. You may set these hashes yourself using the following the naming convention: {parameter name}{hash type}{original character casing}. E.g. `emailMd5Upper`, `waidSha1Lower`, etc. If you choose to do this, we require both Md5 and Sha1 hashes for both upper and lower-case input values. [↩](#a1)</sub>
+<sub><b id="f1">1</b> Our container automatically handles the normalization and hashing of potentially sensitive fields. You may set these hashes manually using the following the naming convention: {parameter name}{hash type}{original character casing}. E.g. `emailMd5Upper`, `waidSha1Lower`, etc. If you choose to do this, we require both Md5 and Sha1 hashes for both upper and lower-case input values. [↩](#a1)</sub>
 
 
 To set, pass a user object to the start function:
