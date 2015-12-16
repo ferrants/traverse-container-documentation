@@ -1,4 +1,4 @@
-Documentation v1.1:
+Documentation v1.2:
 -------------------
 
 Contents
@@ -39,12 +39,13 @@ A user is written as a [Javascript Object Literal](http://www.dyn-web.com/tutori
 | `first`     | First name | No |
 | `last`      | Last name | No |
 | `phone`     | Free-form phone number | No |
-| `street1`    | The first line of the street address (e.g., `"123 Main St."`) | No |
+| `carrier`   | Telephone carrier | No |
+| `street1`   | The first line of the street address (e.g., `"123 Main St."`) | No |
 | `street2`   | Second line of the street address (e.g., `"Apartment 1A"`)        | No |
 | `city`      | The city name  | No |
 | `state`     | The full U.S. state name or two-letter abbreviation | No |
 | `zip`       | The U.S. zip code, 5 or 9 numbers, with or without hyphen | No |
-| `audiences` | Array of audiences to which the user belongs. | No |
+| `context`   | Array of strings detailing the context of a user's interaction on the site, such as interests and actions. E.g. `['in-market car', 'smoker']` | No |
 | `gender`    | Gender of user, either `male` or `female` | No |
 | `birthYear` | Four-digit year in which the use was born (YYYY) | No |
 | `birthMonth` | Numeric month in which the user was born (MM) | No |
@@ -72,7 +73,7 @@ TraverseContainer.start({
   city:      "Springfield",
   state:     "IL",
   zip:       "12345",
-  audiences: ["in-market car", "smoker"],
+  context: ["in-market car", "smoker"],
   userId:    "123abc"
 });
 ```
@@ -101,7 +102,7 @@ TraverseContainer.start({
    first: "John",
    last: "Doe",
    state: "CO",
-   audiences: ["in-market car", "smoker"],
+   context: ["in-market car", "smoker"],
    userId:    "123abc"
  });
 
