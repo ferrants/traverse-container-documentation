@@ -73,7 +73,7 @@ TraverseContainer.start({
   city:      "Springfield",
   state:     "IL",
   zip:       "12345",
-  context: ["in-market car", "smoker"],
+  context:   ["in-market car", "smoker"],
   userId:    "123abc"
 });
 ```
@@ -98,12 +98,12 @@ Include our tag, and initialize with your user data:
 <script src="resourceURL" type="text/javascript"></script>
 <script type="text/javascript">
 TraverseContainer.start({
-   email: "jdoe@domain.com",
-   first: "John",
-   last: "Doe",
-   state: "CO",
+   email:   "jdoe@domain.com",
+   first:   "John",
+   last:    "Doe",
+   state:   "CO",
    context: ["in-market car", "smoker"],
-   userId:    "123abc"
+   userId:  "123abc"
  });
 
 </script>
