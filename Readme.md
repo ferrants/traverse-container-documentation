@@ -87,7 +87,7 @@ TraverseContainer.start({
   zip:       "12345",
   context:   ["in-market car", "smoker"],
   userId:    "123abc"
-}); });
+});
 </script>
 ```
 
