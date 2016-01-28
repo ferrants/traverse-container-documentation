@@ -25,10 +25,6 @@ on your page.
 
 [user](#user) object
 
-#####Example
-
-`TraverseContainer.start(user);`
-
 ####User
 
 A user is written as a [Javascript Object Literal](http://www.dyn-web.com/tutorials/object-literal/) and may contain any of the following fields:
