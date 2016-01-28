@@ -4,30 +4,42 @@ Documentation v1.2:
 Contents
 --------
 
-  * [API](#api)
+  * [Overview](#overview)
   * [Resource URL](#resource-url)
+  * [User object](#user-object)
+  * [Start method](#start-method)
   * [Example](#example)
   * [Best Practices](#best-practices)
 
-API
----
+Overview
+--------
 
-The plugin is initialized with a [user](#user) object and exposes no other methods.
+To use the Traverse container, load it from the [resource URL](resource-url) and then call the [`start` method](start-method).
 
-###Methods
+Resource URL
+------------
 
-####TraverseContainer.start()
+The container is hosted at a client-specific URL:
 
-Sets the user data to be used by the Traverse container and initializes it
-on your page.
+<a href="">http(s)://static.traversedlp.com/v1/container/traverse-container.js?clientId=`clientId`"</a>
 
-#####Parameters:
+| Parameter    | Description | Required |
+| ------------ |------------ | -------- |
+| `clientId` | Your 36-character client ID (includes hyphens). | Yes |
 
-[user](#user) object
+`Start` method
+--------------
 
-####User
+Initialize the container by passing a [`user` object](#user-object) to the [`start` method](#start-method).
 
-A user is written as a [Javascript Object Literal](http://www.dyn-web.com/tutorials/object-literal/) and may contain any of the following fields:
+| Parameter    | Description | Required |
+| ------------ |------------ | -------- |
+| `user` | A [user](#user) object | Yes |
+
+`User` object
+-------------
+
+A `user` object is written as a [Javascript Object Literal](http://www.dyn-web.com/tutorials/object-literal/) and may contain any of the following fields:
 
 | Parameter   | Description | Required |
 | ----------- | ----------- | -------- |
@@ -55,12 +67,16 @@ A user is written as a [Javascript Object Literal](http://www.dyn-web.com/tutori
 
 <sub><b id="f1">1</b> Our container automatically handles the normalization and hashing of potentially sensitive fields. You may set these hashes manually using the following the naming convention: {parameter name}{hash type}{original character casing}. E.g. `emailMd5Upper`, `waidSha1Lower`, etc. If you choose to do this, we require both Md5 and Sha1 hashes for both upper and lower-case input values. [↩](#a1)</sub>
 
+Example
+-------
 
-To set, pass a user object to the start function:
+Include our tag, and initialize with your user data:
 
 ```
+<script src="http(s)://static.traversedlp.com/v1/container/traverse-container.js?clientId=YOUR-CLIENT-ID-HERE" type="text/javascript"></script>
+<script type="text/javascript">
 TraverseContainer.start({
-  email:     "john.doe@domain.com",
+  email:     "john.doe@example.com",
   first:     "John",
   last:      "Doe",
   phone:     "123-456-6789",
@@ -71,37 +87,7 @@ TraverseContainer.start({
   zip:       "12345",
   context:   ["in-market car", "smoker"],
   userId:    "123abc"
-});
-```
-
-Resource URL
-------------
-
-The Traverse container script may be loaded from the following URL:
-
-http(s)://static.traversedlp.com/v1/container/traverse-container.js?clientId={your client ID}
-
-| Parameter    | Description | Required |
-| ------------ |------------ | -------- |
-| `clientId` | Your 36-character client ID (includes hyphens). | Yes |
-
-Example
--------
-
-Include our tag, and initialize with your user data:
-
-```
-<script src="resourceURL" type="text/javascript"></script>
-<script type="text/javascript">
-TraverseContainer.start({
-   email:   "jdoe@domain.com",
-   first:   "John",
-   last:    "Doe",
-   state:   "CO",
-   context: ["in-market car", "smoker"],
-   userId:  "123abc"
- });
-
+}); });
 </script>
 ```
 
