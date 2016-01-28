@@ -9,7 +9,7 @@ Contents
   * [`User` object](#user-object)
   * [`Start` method](#start-method)
   * [Example](#example)
-  * [Best Practices](#best-practices)
+  * [Best practices](#best-practices)
 
 Overview
 --------
@@ -91,7 +91,7 @@ TraverseContainer.start({
 </script>
 ```
 
-Best Practices
+Best practices
 --------------
 
 This module should always be loaded in the page body rather than head. For optimal page load, place script tag at the bottom of your page HTML.
