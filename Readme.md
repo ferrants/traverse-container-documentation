@@ -30,7 +30,7 @@ The container is hosted at the following URL:
 `Start` method
 --------------
 
-Initialize the container by passing a [`user` object](#user-object) to `TraverseContainer.start`.
+Initialize the container by passing a [`user` object](#user-object) to the `start` method.
 
 | Parameter    | Description | Required |
 | ------------ |------------ | -------- |
