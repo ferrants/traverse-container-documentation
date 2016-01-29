@@ -14,14 +14,14 @@ Contents
 Overview
 --------
 
-To use the Traverse container, load it from the [resource URL](resource-url) and then call the [`start` method](#start-method).
+To use the Traverse Container, load it from the [resource URL](resource-url) and then call the [`start` method](#start-method).
 
 Please see the [example](#example), below.
 
 Resource URL
 ------------
 
-The container is hosted at the following URL:
+The Container is hosted at the following URL:
 
 <a href="">http(s)://static.traversedlp.com/v1/container/traverse-container.js?clientId=`clientId`</a>
 
@@ -32,7 +32,7 @@ The container is hosted at the following URL:
 `Start` method
 --------------
 
-Initialize the container by passing a [`user` object](#user-object) to the `start` method.
+Initialize the Container by passing a [`user` object](#user-object) to the `start` method.
 
 | Parameter    | Description | Required |
 | ------------ |------------ | -------- |
@@ -45,7 +45,7 @@ A `user` object is written as a [Javascript Object Literal](http://www.dyn-web.c
 
 | Parameter   | Description | Required |
 | ----------- | ----------- | -------- |
-| `email`     | Plaintext (non-hashed) email address. The container handles all normalization and hashing.<sup id="a1">[1](#f1)</sup> | Yes |
+| `email`     | Plaintext (non-hashed) email address. The Container handles all normalization and hashing.<sup id="a1">[1](#f1)</sup> | Yes |
 | `first`     | First name. | No |
 | `last`      | Last name. | No |
 | `phone`     | Free-form telephone number. | No |
@@ -67,12 +67,12 @@ A `user` object is written as a [Javascript Object Literal](http://www.dyn-web.c
 | `uaid`      | Any unknown advertising ID. Use this value if you are uncertain which type you are receiving.<sup id="a1">[1](#f1)</sup> | No |
 | `uaidHash`  | Use this if you meet the criteria above, your ID has been hashed, and you do not know which algorithm was used. | No |
 
-<sub><b id="f1">1</b> Our container automatically handles the normalization and hashing of potentially sensitive fields. You may set these hashes manually using the following the naming convention: {parameter name}{hash type}{original character casing}. E.g. `emailMd5Upper`, `waidSha1Lower`, etc. If you choose to do this, we require both Md5 and Sha1 hashes for both upper and lower-case input values. [↩](#a1)</sub>
+<sub><b id="f1">1</b> The Container automatically handles the normalization and hashing of potentially sensitive fields. You may set these hashes manually using the following the naming convention: {parameter name}{hash type}{original character casing}. E.g. `emailMd5Upper`, `waidSha1Lower`, etc. If you choose to do this, we require both Md5 and Sha1 hashes for both upper and lower-case input values. [↩](#a1)</sub>
 
 Example
 -------
 
-Include our tag, and initialize with your user data:
+Load the container and initialize with some user data:
 
 ```
 <script src="http(s)://static.traversedlp.com/v1/container/traverse-container.js?clientId=YOUR-CLIENT-ID-HERE" type="text/javascript"></script>
@@ -96,4 +96,5 @@ TraverseContainer.start({
 Best practices
 --------------
 
-This module should always be loaded in the page body rather than head. For optimal page load, place script tag at the bottom of your page HTML.
+1. The container should always be loaded in the HTML `body` rather than `head`.
+2. For optimal page load, place the script at the bottom of your HTML.
