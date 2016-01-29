@@ -19,9 +19,9 @@ To use the Traverse container, load it from the [resource URL](resource-url) and
 Resource URL
 ------------
 
-The container is hosted at a client-specific URL:
+The container is hosted at the following URL:
 
-<a href="">http(s)://static.traversedlp.com/v1/container/traverse-container.js?clientId=`clientId`"</a>
+<a href="">http(s)://static.traversedlp.com/v1/container/traverse-container.js?clientId=`clientId`</a>
 
 | Parameter    | Description | Required |
 | ------------ |------------ | -------- |
@@ -30,7 +30,7 @@ The container is hosted at a client-specific URL:
 `Start` method
 --------------
 
-Initialize the container by passing a [`user` object](#user-object) to the [`start` method](#start-method).
+Initialize the container by passing a [`user` object](#user-object) to `TraverseContainer.start`.
 
 | Parameter    | Description | Required |
 | ------------ |------------ | -------- |
