@@ -14,7 +14,7 @@ Contents
 Overview
 --------
 
-To use the Traverse container, load it from the [resource URL](resource-url) and then call the [`start` method](start-method).
+To use the Traverse container, load it from the [resource URL](resource-url) and then call the [`start` method](#start-method).
 
 Resource URL
 ------------
