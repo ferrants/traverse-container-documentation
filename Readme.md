@@ -16,7 +16,7 @@ Overview
 
 To use the Traverse Container, load it from the [resource URL](resource-url) and then call the [`start` method](#start-method).
 
-Please see the [example](#example), below.
+Please see the [example](#example) and [best practices](#best-practices), below.
 
 Resource URL
 ------------
@@ -96,5 +96,6 @@ TraverseContainer.start({
 Best practices
 --------------
 
-1. The container should always be loaded in the HTML `body` rather than `head`.
-2. For optimal page load, place the script at the bottom of your HTML.
+1. The Container is asynchronous, so always load it from the *target* of a form submit, rather than *on* submit, or it will not have time to record the [data](#user-object) before the user navigates to the next page!
+2. For best compatibility with your page, load the Container from the HTML `body` section rather than the `head`.
+3. To avoid affecting page-load time, load the Container from the bottom of your HTML.
