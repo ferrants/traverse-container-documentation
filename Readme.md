@@ -75,7 +75,7 @@ Example
 Load the container and initialize with some user data:
 
 ```
-<script src="http(s)://static.traversedlp.com/v1/container/traverse-container.js?clientId=YOUR-CLIENT-ID-HERE" type="text/javascript"></script>
+<script src="https://static.traversedlp.com/v1/container/traverse-container.js?clientId=YOUR-CLIENT-ID-HERE" type="text/javascript"></script>
 <script type="text/javascript">
 TraverseContainer.start({
   email:     "john.doe@example.com",
