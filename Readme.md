@@ -61,6 +61,7 @@ A `user` object is written as a [Javascript Object Literal](http://www.dyn-web.c
 | `birthMonth` | Numeric month in which the user was born (MM). | No |
 | `birthDay`  | Day of the month in which the user was born (DD). | No |
 | `userId`    | Client-specific string that uniquely identifies a user within your system. This could be a session ID, a visitor ID from a first-party cookie, or an ID passed via URL parameter from page to page. | No |
+| `aaid`      | Android ID.<sup id="a1">[1](#f1)</sup> | No |
 | `gaid`      | Google's Advertising ID.<sup id="a1">[1](#f1)</sup> | No |
 | `idfa`      | Apple's iOS Identifier for Advertisers.<sup id="a1">[1](#f1)</sup> | No  |
 | `waid`      | Microsoft's Windows Advertising ID.<sup id="a1">[1](#f1)</sup> | No |
