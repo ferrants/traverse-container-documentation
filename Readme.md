@@ -45,7 +45,7 @@ A `user` object is written as a [Javascript Object Literal](http://www.dyn-web.c
 
 | Parameter   | Description | Required |
 | ----------- | ----------- | -------- |
-| `email`     | Plaintext (non-hashed) email address. The Container handles all normalization and hashing.<sup id="a1">[1](#f1)</sup> | Yes |
+| `email`     | Plaintext (non-hashed) email address. *The Container will normalize and hash the email address*.<sup id="a1">[1](#f1)</sup> | Yes |
 | `first`     | First name. | No |
 | `last`      | Last name. | No |
 | `phone`     | Free-form telephone number. | No |
@@ -79,7 +79,7 @@ Load the container and initialize with some user data:
 <script src="https://static.traversedlp.com/v1/container/traverse-container.js?clientId=YOUR-CLIENT-ID-HERE" type="text/javascript"></script>
 <script type="text/javascript">
 TraverseContainer.start({
-  email:     "john.doe@example.com",
+  email:     "john.doe@example.com", /* The Container will normalize and hash the email address. */
   first:     "John",
   last:      "Doe",
   phone:     "123-456-6789",
