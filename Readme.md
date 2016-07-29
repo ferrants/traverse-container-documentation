@@ -45,7 +45,7 @@ A `user` object is written as a [Javascript Object Literal](http://www.dyn-web.c
 
 | Parameter   | Description | Required |
 | ----------- | ----------- | -------- |
-| `email`     | Plaintext (non-hashed) email address. *The Container will normalize and hash the email address*.<sup id="a1">[1](#f1)</sup> | Yes |
+| `email`     | Plaintext (non-hashed) email address. *The Container will normalize and hash the email address client-side, and it will not be transmitted*.<sup id="a1">[1](#f1)</sup> | Yes |
 | `first`     | First name. | No |
 | `last`      | Last name. | No |
 | `phone`     | Free-form telephone number. | No |
@@ -68,7 +68,7 @@ A `user` object is written as a [Javascript Object Literal](http://www.dyn-web.c
 | `uaid`      | Any unknown advertising ID. Use this value if you are uncertain which type you are receiving.<sup id="a1">[1](#f1)</sup> | No |
 | `uaidHash`  | Use this if you meet the criteria above, your ID has been hashed, and you do not know which algorithm was used. | No |
 
-<sub><b id="f1">1</b> The Container automatically handles the normalization and hashing of potentially sensitive fields. You may set these hashes manually using the following the naming convention: {parameter name}{hash type}{original character casing}. E.g. `emailMd5Upper`, `waidSha1Lower`, etc. If you choose to do this, we require both Md5 and Sha1 hashes for both upper and lower-case input values. [↩](#a1)</sub>
+<sub><b id="f1">1</b> The Container automatically handles the normalization and hashing of potentially sensitive fields. You may set these hashes manually using the following the naming convention: {parameter name}{hash type}{original character casing}. E.g. `emailMd5Upper`, `waidSha1Lower`, etc. If you choose to do this, we require all three of Md5, Sha1, and Sha256 hashes for both upper and lower-case input values. [↩](#a1)</sub>
 
 Example
 -------
