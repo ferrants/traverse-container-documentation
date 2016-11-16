@@ -1,8 +1,6 @@
-Traverse Container Documentation v1.2:
---------------------------------------
+# Traverse Container Documentation v1.2:
 
-Contents
---------
+## Contents
 
   * [Overview](#overview)
   * [Resource URL](#resource-url)
@@ -11,15 +9,13 @@ Contents
   * [Example](#example)
   * [Best practices](#best-practices)
 
-Overview
---------
+## Overview
 
 To use the Traverse Container, load it from the [resource URL](resource-url) and then call the [`start` method](#start-method).
 
 Please see the [example](#example) and [best practices](#best-practices), below.
 
-Resource URL
-------------
+## Resource URL
 
 The Container is hosted at the following URL:
 
@@ -29,8 +25,7 @@ The Container is hosted at the following URL:
 | ------------ |------------ | -------- |
 | `clientId` | Your 36-character client ID (includes hyphens). | Yes |
 
-`Start` method
---------------
+## `Start` method
 
 Initialize the Container by passing a [`user` object](#user-object) to the `start` method.
 
@@ -38,8 +33,7 @@ Initialize the Container by passing a [`user` object](#user-object) to the `star
 | ------------ |------------ | -------- |
 | `user` | A [user](#user) object | Yes |
 
-`User` object
--------------
+## `User` object
 
 A `user` object is written as a [Javascript Object Literal](http://www.dyn-web.com/tutorials/object-literal/) and may contain any of the following fields:
 
@@ -61,17 +55,19 @@ A `user` object is written as a [Javascript Object Literal](http://www.dyn-web.c
 | `birthMonth` | Numeric month in which the user was born (MM). | No |
 | `birthDay`  | Day of the month in which the user was born (DD). | No |
 | `userId`    | Client-specific string that uniquely identifies a user within your system. This could be a session ID, a visitor ID from a first-party cookie, or an ID passed via URL parameter from page to page. | No |
-| `aaid`      | Android ID.<sup id="a1">[1](#f1)</sup> | No |
-| `gaid`      | Google's Advertising ID.<sup id="a1">[1](#f1)</sup> | No |
-| `idfa`      | Apple's iOS Identifier for Advertisers.<sup id="a1">[1](#f1)</sup> | No  |
-| `waid`      | Microsoft's Windows Advertising ID.<sup id="a1">[1](#f1)</sup> | No |
-| `uaid`      | Any unknown advertising ID. Use this value if you are uncertain which type you are receiving.<sup id="a1">[1](#f1)</sup> | No |
+| `aaid`      | Android ID. | No |
+| `gaid`      | Google's Advertising ID. | No |
+| `idfa`      | Apple's iOS Identifier for Advertisers. | No  |
+| `waid`      | Microsoft's Windows Advertising ID. | No |
+| `uaid`      | Any unknown advertising ID. Use this value if you are uncertain which type you are receiving. | No |
 | `uaidHash`  | Use this if you meet the criteria above, your ID has been hashed, and you do not know which algorithm was used. | No |
 
-<sub><b id="f1">1</b> The Container automatically handles the normalization and hashing of potentially sensitive fields. You may set these hashes manually using the following the naming convention: {parameter name}{hash type}{original character casing}. E.g. `emailMd5Upper`, `waidSha1Lower`, etc. If you choose to do this, we require all three of Md5, Sha1, and Sha256 hashes for both upper and lower-case input values. [↩](#a1)</sub>
+### Hashed Data
 
-Example
--------
+The Container automatically handles the normalization and hashing of potentially sensitive fields. You may set these hashes manually using the following the naming convention: {parameter name}{hash type}{original character casing}. E.g. `emailMd5Upper`, `waidSha1Lower`, etc. If you choose to do this, we require all three of Md5, Sha1, and Sha256 hashes for both upper and lower-case input values, so 6 total for each field that is passed hashed.
+
+
+## Example
 
 Load the container and initialize with some user data:
 
@@ -93,6 +89,20 @@ TraverseContainer.start({
 });
 </script>
 ```
+
+Initializing with hashed email addresses:
+
+```
+TraverseContainer.start({
+  emailMd5Lower:     "8eb1b522f60d11fa897de1dc6351b7e8",
+  emailMd5Upper:     "61cad946c746dae396d1eeb795c3fa30",
+  emailSha1Lower:    "73ec53c4ba1747d485ae2a0d7bfafa6cda80a5a9",
+  emailSha1Upper:    "a22f248ad84acf5c54dab0036bf5ebed3958fbb6",
+  emailSha256Lower:  "836f82db99121b3481011f16b49dfa5fbc714a0d1b1b9f784a1ebbbf5b39577f",
+  emailSha256Upper:  "540c78e61f7b5440c1a229e4ccccb651bfbbec672939f573e0870d290bfcc54e"
+});
+```
+
 
 Best practices
 --------------
