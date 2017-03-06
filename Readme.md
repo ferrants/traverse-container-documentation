@@ -94,6 +94,20 @@ TraverseContainer.start({
 </script>
 ```
 
+Initializing with hashed email addresses:
+
+```
+TraverseContainer.start({
+  emailMd5Lower:     "1105677c8d9decfa1e36a73ff5fb5531",
+  emailMd5Upper:     "d0768523e91903f0b6254679f8ed4568",
+  emailSha1Lower:    "ba9d46a037766855efca2730031bfc5db095c654",
+  emailSha1Upper:    "ddbead35b161ee92ae864505d4a78bc6c09d327f",
+  emailSha256Lower:  "39e630f520f207b15632b701131a8df516270f23111e8d7cd7a38b724974ca6c",
+  emailSha256Upper:  "bc7132be2f18de68eb81016fea548dd654c1362759b6dc5b79a0786f6ec13711",
+});
+```
+
+
 Best practices
 --------------
 
